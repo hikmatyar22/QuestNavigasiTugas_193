@@ -85,6 +85,22 @@ fun TampilanBeranda(
                 color = Color.White
             )
 
+            Spacer(modifier = Modifier.height(80.dp))
+            Button(
+                onClick = { onNavigateToForm() },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 25.dp),
+                shape = MaterialTheme.shapes.large,
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF415A77))
+            ) {
+                Text(
+                    text = stringResource(id = R.string.masuk),
+                    fontSize = 25.sp,
+                    fontWeight = FontWeight.Medium,
+                    modifier = Modifier.padding(vertical = 4.dp)
+                )
+            }
         }
     }
 }
