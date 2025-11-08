@@ -136,6 +136,28 @@ fun FormInput(
                         }
                     }
 
+                    Spacer(modifier = Modifier.height(10.dp))
+                    Text(
+                        text = stringResource(id = R.string.fans),
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White
+                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(3.dp)
+                    ) {
+                        TipeFans.forEach { item ->
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                RadioButton(
+                                    selected = (textTipeFans == item),
+                                    onClick = { textTipeFans = item },
+                                    colors = RadioButtonDefaults.colors(selectedColor = Color.White)
+                                )
+                                Text(text = item, color = Color.White)
+                            }
+                        }
+                    }
 
                 }
             }
