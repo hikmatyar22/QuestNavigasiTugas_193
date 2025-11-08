@@ -106,7 +106,49 @@ fun TampilanData(
                 }
             }
 
+            Spacer(modifier = Modifier.height(20.dp))
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.Black),
+                shape = RoundedCornerShape(20.dp),
+                elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)
+            ) {
+                Column(
+                    modifier = Modifier.padding(horizontal = 24.dp, vertical = 28.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp),
+                    horizontalAlignment = Alignment.Start
+                ) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(90.dp)
+                    ) {
+                        Column {
+                            Text(stringResource(id = R.string.namalengkap), fontWeight = FontWeight.Bold, color = Color.Gray)
+                            Text("Hafiza", color = Color.White)
+                        }
+                        Column {
+                            Text(stringResource(id = R.string.jenis), fontWeight = FontWeight.Bold, color = Color.Gray)
+                            Text("Perempuan", color = Color.White)
+                        }
+                    }
 
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(100.dp)
+                    ) {
+                        Column {
+                            Text(stringResource(id = R.string.fans), fontWeight = FontWeight.Bold, color = Color.Gray)
+                            Text("Fans Aktif", color = Color.White)
+                        }
+                        Column {
+                            Text(stringResource(id = R.string.alamat), fontWeight = FontWeight.Bold, color = Color.Gray)
+                            Text("Pontianak", color = Color.White)
+                        }
+                    }
+                }
+            }
 
 
         }
