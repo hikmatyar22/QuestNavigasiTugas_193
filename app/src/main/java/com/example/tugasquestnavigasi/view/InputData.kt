@@ -176,6 +176,48 @@ fun FormInput(
                         label = { Text("Alamat", color = Color.White) }
                     )
 
+                    Spacer(modifier = Modifier.height(130.dp))
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(50.dp),
+                        horizontalArrangement = Arrangement.spacedBy(16.dp)
+                    ) {
+                        Button(
+                            onClick = OnBackBtnClick,
+                            modifier = Modifier
+                                .weight(1f)
+                                .fillMaxHeight(),
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF415A77)),
+                            shape = MaterialTheme.shapes.extraLarge
+                        ) {
+                            Text(
+                                text = stringResource(id = R.string.beranda),
+                                fontSize = 16.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color.White
+                            )
+                        }
+
+                        Button(
+                            onClick = {
+                                Nama = textNama
+                                JenisKelamin = textJenis
+                                Fans = textTipeFans
+                                Alamat = textAlamat
+
+                                showDialog = true
+                            },
+                            modifier = Modifier
+                                .weight(1f)
+                                .fillMaxHeight(),
+                            enabled = textAlamat.isNotEmpty(),
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF415A77)),
+                            shape = MaterialTheme.shapes.extraLarge
+                        ) {
+
+                        }
+                    }
                 }
             }
         }
