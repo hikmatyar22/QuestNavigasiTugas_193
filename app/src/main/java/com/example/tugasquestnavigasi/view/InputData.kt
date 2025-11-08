@@ -113,6 +113,29 @@ fun FormInput(
                         label = { Text("Nama Lengkap", color = Color.White) }
                     )
 
+                    Spacer(modifier = Modifier.height(10.dp))
+                    Text(
+                        text = stringResource(id = R.string.jenis),
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White
+                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    ) {
+                        Jenis.forEach { item ->
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                RadioButton(
+                                    selected = (textJenis == item),
+                                    onClick = { textJenis = item },
+                                    colors = RadioButtonDefaults.colors(selectedColor = Color.White)
+                                )
+                                Text(text = item, color = Color.White)
+                            }
+                        }
+                    }
+
 
                 }
             }
