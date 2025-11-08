@@ -159,6 +159,23 @@ fun FormInput(
                         }
                     }
 
+                    Spacer(modifier = Modifier.height(10.dp))
+                    Text(
+                        text = stringResource(id = R.string.alamat),
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White
+                    )
+                    OutlinedTextField(
+                        value = textAlamat,
+                        onValueChange = { textAlamat = it },
+                        singleLine = true,
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = MaterialTheme.shapes.small,
+                        textStyle = TextStyle(color = Color.White),
+                        label = { Text("Alamat", color = Color.White) }
+                    )
+
                 }
             }
         }
