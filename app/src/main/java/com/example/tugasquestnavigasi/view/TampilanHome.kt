@@ -40,5 +40,19 @@ import com.example.tugasquestnavigasi.R
 fun TampilanBeranda(
     onNavigateToForm: () -> Unit
 ) {
+    Scaffold(
+        modifier = Modifier,
+        containerColor = Color(0xFF0D1B2A)
+    ) { isikonten ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color(0xFF0D1B2A))
+                .padding(isikonten)
+                .padding(top = 50.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
 
+        }
+    }
 }
