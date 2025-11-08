@@ -84,10 +84,38 @@ fun FormInput(
             )
             Spacer(modifier = Modifier.height(30.dp))
 
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 12.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.Black),
+                shape = RoundedCornerShape(20.dp),
+                elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)
+            ) {
+                Column(
+                    modifier = Modifier.padding(horizontal = 24.dp, vertical = 28.dp),
+                    verticalArrangement = Arrangement.spacedBy(5.dp),
+                    horizontalAlignment = Alignment.Start
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.namalengkap),
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White
+                    )
+                    OutlinedTextField(
+                        value = textNama,
+                        onValueChange = { textNama = it },
+                        singleLine = true,
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = MaterialTheme.shapes.small,
+                        textStyle = TextStyle(color = Color.White),
+                        label = { Text("Nama Lengkap", color = Color.White) }
+                    )
 
 
-
-
+                }
+            }
         }
     }
 }
