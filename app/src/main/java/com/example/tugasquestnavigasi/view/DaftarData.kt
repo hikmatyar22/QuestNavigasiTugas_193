@@ -42,8 +42,31 @@ fun TampilanData(
     OnBerandaClick: () -> Unit,
     OnFormulirClick: () -> Unit
 ) {
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        containerColor = Color(0xFF0D1B2A)
+    ) { isikonten ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color(0xFF0D1B2A))
+                .padding(isikonten)
+                .padding(top = 70.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = stringResource(id = R.string.list),
+                fontSize = 25.sp,
+                fontFamily = FontFamily.Serif,
+                fontWeight = FontWeight.Bold,
+                color = Color.White,
+            )
 
+
+
+
+        }
     }
-
+}
 
 
