@@ -61,6 +61,7 @@ fun FormInput(
     val Jenis = listOf("Laki-Laki", "Perempuan")
     val TipeFans = listOf("Fans Biasa", "Fans Aktif", "Ultras")
 
+    var showDialog by remember { mutableStateOf(false) }
 
 
     }
