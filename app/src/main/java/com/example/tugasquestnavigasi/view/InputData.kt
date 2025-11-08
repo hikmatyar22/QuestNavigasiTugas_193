@@ -215,11 +215,44 @@ fun FormInput(
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF415A77)),
                             shape = MaterialTheme.shapes.extraLarge
                         ) {
-
+                            Text(
+                                text = stringResource(id = R.string.submit),
+                                fontSize = 16.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color.White
+                            )
                         }
                     }
                 }
             }
+        }
+
+        if (showDialog) {
+            AlertDialog(
+                onDismissRequest = { showDialog = false },
+                title = { Text(text = "Data Berhasil Disimpan") },
+                text = {
+                    Column {
+                        Text("Nama Lengkap: $Nama")
+                        Text("Jenis Kelamin: $JenisKelamin")
+                        Text("Kategori Fans: $Fans")
+                        Text("Alamat: $Alamat")
+                    }
+                },
+                confirmButton = {
+                    Button(onClick = {
+                        showDialog = false
+                        OnSubmitBtnClick()
+                    }) {
+                        Text("OK")
+                    }
+                },
+                dismissButton = {
+                    Button(onClick = { showDialog = false }) {
+                        Text("Batal")
+                    }
+                }
+            )
         }
     }
 }
