@@ -71,7 +71,19 @@ fun TampilanBeranda(
                     .padding(5.dp)
             )
 
-
+            Spacer(modifier = Modifier.height(50.dp))
+            Text(
+                text = stringResource(id = R.string.nama),
+                fontSize = 16.sp,
+                fontFamily = FontFamily.Serif,
+                color = Color.White
+            )
+            Text(
+                text = stringResource(id = R.string.nim),
+                fontSize = 16.sp,
+                fontFamily = FontFamily.Serif,
+                color = Color.White
+            )
 
         }
     }
