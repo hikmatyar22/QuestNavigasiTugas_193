@@ -5,5 +5,15 @@
     <string name="nama">Hikmatyar Alghifary</string>
     <string name="nim">20230140193</string>
 
+    <string name="titel">Formulir Pendaftaraan</string>
+    <string name="namalengkap">Nama Lengkap</string>
+    <string name="jenis">Jenis Kelamin</string>
+    <string name="fans">Kategori Fans</string>
+    <string name="alamat">Alamat</string>
+    <string name="submit">Submit</string>
+    <string name="beranda">Beranda</string>
+    <string name="formulir">Formulir</string>
+    <string name="kembali">Home</string>
+    <string name="list">List Daftar Data Fans</string>
 
 </resources>
