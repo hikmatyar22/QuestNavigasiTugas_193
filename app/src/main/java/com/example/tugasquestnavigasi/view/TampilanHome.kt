@@ -85,7 +85,7 @@ fun TampilanBeranda(
                 color = Color.White
             )
 
-            Spacer(modifier = Modifier.height(80.dp))
+            Spacer(modifier = Modifier.height(120.dp))
             Button(
                 onClick = { onNavigateToForm() },
                 modifier = Modifier
