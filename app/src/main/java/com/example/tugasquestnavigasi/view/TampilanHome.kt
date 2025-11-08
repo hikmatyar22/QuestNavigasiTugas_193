@@ -60,7 +60,16 @@ fun TampilanBeranda(
                 fontWeight = FontWeight.Bold,
                 color = Color.White,
             )
+            Spacer(modifier = Modifier.height(50.dp))
 
+            val logo = painterResource(id = R.drawable.gambar)
+            Image(
+                painter = logo,
+                contentDescription = null,
+                modifier = Modifier
+                    .size(300.dp)
+                    .padding(5.dp)
+            )
 
 
 
