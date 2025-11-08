@@ -149,7 +149,47 @@ fun TampilanData(
                     }
                 }
             }
+            Spacer(modifier = Modifier.height(250.dp))
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(50.dp),
+                horizontalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                Button(
+                    onClick = OnBerandaClick,
+                    modifier = Modifier
+                        .weight(1f)
+                        .padding(horizontal = 30.dp)
+                        .fillMaxHeight(),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF415A77)),
+                    shape = MaterialTheme.shapes.small
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.kembali),
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White
+                    )
+                }
 
+                Button(
+                    onClick = OnFormulirClick,
+                    modifier = Modifier
+                        .weight(1f)
+                        .padding(horizontal = 30.dp)
+                        .fillMaxHeight(),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF415A77)),
+                    shape = MaterialTheme.shapes.small
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.formulir),
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White
+                    )
+                }
+            }
 
         }
     }
