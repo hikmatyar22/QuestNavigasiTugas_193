@@ -52,6 +52,17 @@ fun TampilanBeranda(
                 .padding(top = 50.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            Spacer(modifier = Modifier.height(50.dp))
+            Text(
+                text = stringResource(id = R.string.selamat),
+                fontSize = 20.sp,
+                fontFamily = FontFamily.Serif,
+                fontWeight = FontWeight.Bold,
+                color = Color.White,
+            )
+
+
+
 
         }
     }
